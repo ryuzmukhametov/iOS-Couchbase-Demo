@@ -217,6 +217,7 @@
 }
 
 
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0)
         return;
@@ -301,14 +302,19 @@
     _push = [[repls objectAtIndex: 1] retain];
     [_pull addObserver: self forKeyPath: @"completed" options: 0 context: NULL];
     [_push addObserver: self forKeyPath: @"completed" options: 0 context: NULL];
+    [_pull addObserver: self forKeyPath: @"error" options: 0 context: NULL];  // added
+    [_push addObserver: self forKeyPath: @"error" options: 0 context: NULL];   // added
+    
 }
 
 
 - (void) forgetSync {
     [_pull removeObserver: self forKeyPath: @"completed"];
+    [_pull removeObserver: self forKeyPath: @"error"];  //added
     [_pull release];
     _pull = nil;
     [_push removeObserver: self forKeyPath: @"completed"];
+    [_push removeObserver: self forKeyPath: @"error"];  //added
     [_push release];
     _push = nil;
 }
@@ -347,6 +353,13 @@
                          change:(NSDictionary *)change context:(void *)context
 {
     if (object == _pull || object == _push) {
+        if ([keyPath isEqualToString:@"error"]) {
+            NSError *error = object == _pull ? _pull.error : _push.error;
+            if (error) {
+                NSLog(@"OBSERVE_ERROR = %@", error);
+            }
+            return;
+        }
         unsigned completed = _pull.completed + _push.completed;
         unsigned total = _pull.total + _push.total;
         NSLog(@"SYNC progress: %u / %u", completed, total);
@@ -359,5 +372,36 @@
     }
 }
 
+- (IBAction)setCorrectCredentialsAction:(id)sender {
+    [self setCredentialsWithLogin:@"correct_login" andPassword:@"correct_password"];
+}
 
+
+- (void) setCredentialsWithLogin:(NSString*)login andPassword:(NSString*)password
+{
+    NSURL* newRemoteURL = nil;
+    NSString *syncpoint = [[NSUserDefaults standardUserDefaults] objectForKey:@"syncpoint"];
+    if (syncpoint.length > 0)
+        newRemoteURL = [NSURL URLWithString:syncpoint];
+    
+    NSURLCredential* cred;
+    cred = [NSURLCredential credentialWithUser: login
+                                      password: password
+                                   persistence: NSURLCredentialPersistenceForSession];
+    NSURLProtectionSpace* space;
+    NSInteger port = [newRemoteURL.port integerValue];
+    if (port == 0) port = 80;
+    space = [[[NSURLProtectionSpace alloc] initWithHost: newRemoteURL.host
+                                                   port: port
+                                               protocol: newRemoteURL.scheme
+                                                  realm: nil
+                                   authenticationMethod: NSURLAuthenticationMethodDefault]
+             autorelease];
+    
+    [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential: cred
+                                                        forProtectionSpace: space];
+    
+    [_pull restart];
+    [_push restart];
+}
 @end

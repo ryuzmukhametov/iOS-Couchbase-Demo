@@ -1,0 +1,58 @@
+2013-08-15 11:46:44.886 GrocerySync[1494:907] >>>>>> 1 docs being updated
+2013-08-15 11:46:44.887 GrocerySync[1494:907] >>>>>> 2 docs being updated
+11:46:44.899‖ Replication: TDPuller[http://cdb.quickresto.ru/grocery] took 10.035 sec; error=Error Domain=TDHTTP Code=401 "401 unauthorized" UserInfo=0x2087f890 {NSURL=http://cdb.quickresto.ru/grocery/_local/8eebc3841fafa4ec1df9591bc609d1e3e585df76, NSLocalizedFailureReason=unauthorized, NSLocalizedDescription=401 unauthorized}
+2013-08-15 11:46:44.908 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+11:46:44.912‖ TDBasicAuthorizer initWith <http://cdb.quickresto.ru/grocery>
+2013-08-15 11:46:44.927 GrocerySync[1494:907] <<<<<< 1 docs being updated
+11:46:44.940‖ Replication: TDPusher[http://cdb.quickresto.ru/grocery] took 10.044 sec; error=Error Domain=TDHTTP Code=401 "401 unauthorized" UserInfo=0x1f555ef0 {NSURL=http://cdb.quickresto.ru/grocery/_local/67016b180efa761badfe38428a5ae94436a3fb5f, NSLocalizedFailureReason=unauthorized, NSLocalizedDescription=401 unauthorized}
+2013-08-15 11:46:44.949 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+11:46:44.952‖ TDBasicAuthorizer initWith <http://cdb.quickresto.ru/grocery>
+2013-08-15 11:46:44.967 GrocerySync[1494:907] <<<<<< 0 docs being updated
+2013-08-15 11:46:44.968 GrocerySync[1494:907] **** CHANGE #6: CouchDocument[9E77..E55B]  3-e2ff1a3482f6719e2bb4c4fa60bd4855 -> 4-cc82a094db5e6e3383cb154c4d693fc6
+2013-08-15 11:46:44.972 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+2013-08-15 11:46:44.975 GrocerySync[1494:907] CouchPersistentReplication[9E77..E55B]: state := error
+2013-08-15 11:46:44.976 GrocerySync[1494:907] CouchPersistentReplication[9E77..E55B] = (null)
+2013-08-15 11:46:44.976 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+2013-08-15 11:46:44.977 GrocerySync[1494:907] OBSERVE_ERROR = Error Domain=CouchHTTPError Code=401 "401 unauthorized" UserInfo=0x1f5e0d30 {NSLocalizedFailureReason=401 unauthorized, NSURL=http://cdb.quickresto.ru/grocery, NSLocalizedDescription=401 unauthorized}
+2013-08-15 11:46:44.977 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+2013-08-15 11:46:44.978 GrocerySync[1494:907] SYNC progress: 0 / 0
+2013-08-15 11:46:44.978 GrocerySync[1494:907] CouchDatabase: External change with seq=6
+2013-08-15 11:46:44.979 GrocerySync[1494:907] **** CHANGE #7: CouchDocument[9E77..E55B]  4-cc82a094db5e6e3383cb154c4d693fc6 -> 5-966d676b6eee1ed578fcb6061390fc9e
+2013-08-15 11:46:44.979 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+2013-08-15 11:46:44.986 GrocerySync[1494:907] CouchPersistentReplication[9E77..E55B]: state := triggered
+2013-08-15 11:46:44.987 GrocerySync[1494:907] OBSERVE_ERROR = Error Domain=CouchHTTPError Code=401 "401 unauthorized" UserInfo=0x1f5e0d30 {NSLocalizedFailureReason=401 unauthorized, NSURL=http://cdb.quickresto.ru/grocery, NSLocalizedDescription=401 unauthorized}
+2013-08-15 11:46:44.988 GrocerySync[1494:907] SYNC progress: 0 / 0
+2013-08-15 11:46:44.988 GrocerySync[1494:907] CouchDatabase: External change with seq=7
+2013-08-15 11:46:44.989 GrocerySync[1494:907] **** CHANGE #9: CouchDocument[B77F..E337]  3-1d01fb7c848dfcb9cd70a5830354fb8e -> 4-7356b094b977c58bb0da584b9d8e9ec7
+2013-08-15 11:46:44.994 GrocerySync[1494:907] CouchPersistentReplication[B77F..E337]: state := error
+2013-08-15 11:46:44.994 GrocerySync[1494:907] CouchPersistentReplication[B77F..E337] = (null)
+2013-08-15 11:46:44.995 GrocerySync[1494:907] OBSERVE_ERROR = Error Domain=CouchHTTPError Code=401 "401 unauthorized" UserInfo=0x1f5e0ce0 {NSLocalizedFailureReason=401 unauthorized, NSURL=http://cdb.quickresto.ru/grocery, NSLocalizedDescription=401 unauthorized}
+2013-08-15 11:46:44.996 GrocerySync[1494:907] SYNC progress: 0 / 0
+2013-08-15 11:46:44.997 GrocerySync[1494:907] CouchDatabase: External change with seq=9
+2013-08-15 11:46:44.998 GrocerySync[1494:907] **** CHANGE #10: CouchDocument[B77F..E337]  4-7356b094b977c58bb0da584b9d8e9ec7 -> 5-24135e70cd13cfd1510efc794dad7107
+2013-08-15 11:46:45.002 GrocerySync[1494:907] CouchPersistentReplication[B77F..E337]: state := triggered
+2013-08-15 11:46:45.003 GrocerySync[1494:907] OBSERVE_ERROR = Error Domain=CouchHTTPError Code=401 "401 unauthorized" UserInfo=0x1f5e0ce0 {NSLocalizedFailureReason=401 unauthorized, NSURL=http://cdb.quickresto.ru/grocery, NSLocalizedDescription=401 unauthorized}
+2013-08-15 11:46:45.003 GrocerySync[1494:907] SYNC progress: 0 / 0
+2013-08-15 11:46:45.004 GrocerySync[1494:907] CouchDatabase: External change with seq=10
+2013-08-15 11:46:45.005 GrocerySync[1494:907] CouchLiveQuery: Starting...
+2013-08-15 11:46:45.007 GrocerySync[1494:907] CouchPersistentReplication[B77F..E337] = Processed 0 / 0 changes
+2013-08-15 11:46:45.008 GrocerySync[1494:907] CouchPersistentReplication[9E77..E55B] = Processed 0 / 0 changes
+2013-08-15 11:46:45.011 GrocerySync[1494:907] CouchLiveQuery: ...Finished (status=200)
+2013-08-15 11:46:45.012 GrocerySync[1494:907] CouchLiveQuery: ...Rows changed! (now 2)
+2013-08-15 11:46:45.068 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+2013-08-15 11:46:45.072 GrocerySync[1494:907] CouchPersistentReplication[B77F..E337] = Idle
+2013-08-15 11:46:45.243 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+2013-08-15 11:46:45.247 GrocerySync[1494:907] CouchPersistentReplication[9E77..E55B] = Processed 0 / 3 changes
+2013-08-15 11:46:45.248 GrocerySync[1494:907] SYNC progress: 0 / 3
+2013-08-15 11:46:46.876 GrocerySync[1494:907] **** CHANGE #3: CouchDocument[0DD6..B124]  (null) -> 3-e5b6ab0365f92187e0cf15f8b24ab1a8 DELETED
+2013-08-15 11:46:46.876 GrocerySync[1494:907] CouchDatabase: External change with seq=3
+2013-08-15 11:46:46.878 GrocerySync[1494:907] CouchLiveQuery: Starting...
+2013-08-15 11:46:46.883 GrocerySync[1494:907] **** CHANGE #6: CouchDocument[7E69..EDD6]  (null) -> 3-a71d2d58685c6d08a361ba47ac1790af
+2013-08-15 11:46:46.884 GrocerySync[1494:907] CouchDatabase: External change with seq=6
+2013-08-15 11:46:46.885 GrocerySync[1494:907] **** CHANGE #9: CouchDocument[EF97..8B53]  (null) -> 3-bcb66d46b8122ebffffc1226fe3c0eaa
+2013-08-15 11:46:46.886 GrocerySync[1494:907] CouchDatabase: External change with seq=9
+2013-08-15 11:46:46.898 GrocerySync[1494:350f] CouchTouchDBServer[touchdb://server1/]: Replication progress changed
+2013-08-15 11:46:46.898 GrocerySync[1494:907] CouchLiveQuery: ...Finished (status=200)
+2013-08-15 11:46:46.899 GrocerySync[1494:907] CouchLiveQuery: ...Rows changed! (now 2)
+2013-08-15 11:46:46.989 GrocerySync[1494:907] CouchPersistentReplication[9E77..E55B] = Idle
+2013-08-15 11:46:46.990 GrocerySync[1494:907] SYNC progress: 0 / 0

@@ -44,5 +44,6 @@
 
 - (IBAction)configureSync:(id)sender;
 - (IBAction) deleteCheckedItems:(id)sender;
+- (IBAction)setCorrectCredentialsAction:(id)sender;
 
 @end
